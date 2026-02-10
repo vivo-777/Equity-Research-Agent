@@ -1,10 +1,11 @@
+streamlit
+yfinance
+pandas
+plotly
 langchain
 langchain-groq
+langchain-community
 langgraph
-yfinance
+python-dotenv
 ta
 tavily-python
-fastapi
-uvicorn
-python-dotenv
-pandas
