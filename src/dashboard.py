@@ -12,8 +12,8 @@ except ImportError:
     from src.main import app
 
 # --- 1. CONFIGURATION ---
-st.set_page_config(page_title="AI Hedge Fund", layout="wide")
-st.title("🤖 AI Hedge Fund ")
+st.set_page_config(page_title="Equity Research", layout="wide")
+st.title("🤖 AI Equity Research Agent ")
 
 # --- 2. SIDEBAR ---
 with st.sidebar:
