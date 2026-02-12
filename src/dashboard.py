@@ -41,7 +41,6 @@ if run_btn:
             analyst_draft = final_state.get("analyst_draft", "No report generated.")
             critique = final_state.get("critique")
             
-            # --- 5. DISPLAY METRICS ---
             col1, col2, col3 = st.columns(3)
             current_price = market_data.get("current_price", "N/A")
             signal = technicals.get('overall_signal', {}).get('signal', 'Neutral')
@@ -50,7 +49,6 @@ if run_btn:
             col2.metric("Current Price", f"${current_price}")
             col3.metric("Analyst Decision", signal)
 
-            # --- 6. PLOTLY CHART ---
             st.subheader(f"{ticker} Price Action (6 Months)")
             
             if "history_df" in market_data and not market_data["history_df"].empty:
@@ -71,7 +69,6 @@ if run_btn:
             else:
                 st.warning("Price history data not available for charting.")
 
-            # --- 7. TABS FOR DETAILS ---
             tab1, tab2, tab3 = st.tabs(["📝 Research Report", "📊 Fundamental Data", "🧠 Agent Logic"])
             
             with tab1:
@@ -103,5 +100,4 @@ if run_btn:
                 st.json(technicals)
 
         except Exception as e:
-            # THIS IS WHERE THE ERROR LOGGING BELONGS
             st.error(f"An unexpected error occurred: {str(e)}")
